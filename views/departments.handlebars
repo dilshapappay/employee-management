@@ -1,0 +1,33 @@
+<div>
+  <h2>Departments</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each departments}}
+        <tr>
+          <td>
+            {{this.name}}
+          </td>
+          <td> {{this.description}}</td>
+          <td><a
+              href="/editdepartment/{{this.id}}?name={{this.name}}&description={{this.description}}"
+            ><i class="bi bi-pencil"></i></a></td>
+          <td><i
+              class="bi bi-trash-fill"
+              onclick="deletedepartment({{this.id}})"
+            ></i></td>
+
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <a href="/adddepartment"><button class="btn btn-primary">Add</button></a>
+</div>

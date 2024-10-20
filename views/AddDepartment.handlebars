@@ -1,0 +1,33 @@
+<form action="/savedepartment" method="post">
+  <div>
+    <input
+      hidden
+      type="text"
+      value="{{departmentId}}"
+      name="hiddendepartmentid"
+    />
+    <label for="Department Name">Department Name</label>
+    <input
+      class="form-control"
+      type="text"
+      value="{{name}}"
+      name="DepartmentName"
+      placeholder="Enter Department Name"
+    />
+    <label for="Description">Description</label>
+    <input
+      type="text"
+      name="Description"
+      value="{{description}}"
+      class="form-control"
+      placeholder="Enter description"
+    />
+    <button type="submit" class="btn btn-primary">
+      {{#if departmentId}}
+        Update
+      {{else}}
+        Add
+      {{/if}}
+    </button>
+  </div>
+</form>

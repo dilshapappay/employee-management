@@ -1,0 +1,45 @@
+<form method="post" action="/saveemployee">
+  <div>
+    <label for="Employee Name">Employee Name</label>
+    <input
+      class="form-control"
+      type="text"
+      value="{{name}}"
+      name="EmployeeName"
+    />
+
+    <label for="Age">Age</label>
+    <input
+      class="form-control"
+      type="number"
+      value="{{age}}"
+      name="EmployeeAge"
+    />
+
+    <label for="department">Department:</label>
+    <select class="form-select" name="department" id="department">
+      <option value="" selected>Choose department</option>
+      {{#each departments}}
+        <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+
+    <label for="Salary">Salary</label>
+    <input
+      class="form-control"
+      type="number"
+      value="{{salary}}"
+      name="EmployeeSalary"
+    />
+
+    <label for="phone number">Phone number</label>
+    <input
+      class="form-control"
+      type="number"
+      value="{{phonenumber}}"
+      name="EmployeePhoneNumber"
+    />
+
+    <button type="submit" class="btn btn-primary">save</button>
+  </div>
+</form>
